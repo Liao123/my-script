@@ -8,10 +8,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 //替换antd的moment为dayjs
 const AntdDayjsWebpackPlugin = require("antd-dayjs-webpack-plugin");
 module.exports = {
-  entry: path.resolve(process.cwd(), "src/index.tsx"), //命令行 当前所在位置
-  // entry: path.resolve(__dirname, "../src/index.tsx"),
+  entry: path.resolve(process.cwd(), "src/index.tsx"), //这个是命令行执行所在位置 往下找src 
+  // entry: path.resolve(__dirname, "../src/index.tsx"), //这个是从当前文件目录 往上一级找src文件夹 
   output: {
-    // path: path.resolve(__dirname, "../dist"),
+    // path: path.resolve(__dirname, "../dist"), 
     path: path.resolve(process.cwd(), "dist"),
     filename: "js/[name]_[fullhash:8].js", //构建过程中的任何更改时都会发生变化
     chunkFilename: "js/[name]_[chunkhash:8].js", //在其内容发生变化时发生变化，而不会影响主要文件的名称

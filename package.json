@@ -1,6 +1,6 @@
 {
   "name": "my-scripts",
-  "version": "1.3.2",
+  "version": "1.3.5",
   "description": "Custom npm scripts package",
   "bin": {
     "my-scripts": "bin/my-script.js"
