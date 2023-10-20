@@ -12,6 +12,7 @@ const start = path.join(__dirname, "../build/dev.config.js");
 const build = path.join(__dirname, "../build/pro.config.js");
 const buildAnaly = path.join(__dirname, "../build/analy.config.js");
 const startVite = path.join(__dirname, "../build/vite.config.js");
+const rollup = path.join(__dirname, "../build/rollup.config.js");
 
 let TYPES = {
   "build:analy": `env-cmd -f .env.pro webpack --config ${buildAnaly}`,
@@ -19,6 +20,7 @@ let TYPES = {
   start: `env-cmd -f .env.dev webpack serve --open --config ${start}`,
   serve: "serve -s dist",
   "start:vite": `vite --config ${startVite}`,
+  "build:rollup": `rollup src/index.js --config ${rollup}`,
 };
 // 定义命令行参数
 program
