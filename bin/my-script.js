@@ -11,12 +11,14 @@ const { program } = require("commander");
 const start = path.join(__dirname, "../build/dev.config.js");
 const build = path.join(__dirname, "../build/pro.config.js");
 const buildAnaly = path.join(__dirname, "../build/analy.config.js");
+const startVite = path.join(__dirname, "../build/vite.config.js");
 
 let TYPES = {
   "build:analy": `env-cmd -f .env.pro webpack --config ${buildAnaly}`,
   build: `env-cmd -f .env.pro webpack --config ${build}`,
   start: `env-cmd -f .env.dev webpack serve --open --config ${start}`,
   serve: "serve -s dist",
+  "start:vite": `vite --config ${startVite}`,
 };
 // 定义命令行参数
 program
