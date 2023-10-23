@@ -1,5 +1,6 @@
+const path = require("path");
 export default {
-  input: "src/main.js",
+  input: path.resolve(process.cwd(), "src/index.tsx"),
   output: {
     exports: "default",
     // file: "./dist/bundle.js", //单个check使用
